@@ -104,6 +104,10 @@
         margin-right: 0.5rem;
         animation: pulse 2s infinite;
       }
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+
 
       @keyframes pulse {
         0%,
@@ -630,6 +634,10 @@
       }
 
       @media (max-width: 768px) {
+        
+        .contact-item{
+          padding: 15px 10px;
+        }
         .hero-title {
           font-size: 2.5rem;
         }
@@ -691,7 +699,7 @@
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon text-white"></span>
         </button>
         <div
           class="collapse navbar-collapse justify-content-end"
@@ -713,7 +721,7 @@
             </li>
             <li class="nav-item">
                 <a href="images/ruchitha_patel_resume.pdf">
-              <button class="btn btn-resume">
+              <button class="btn btn-resume" style="margin-top: 15px;">
                View Resume
               </button>
               </a>
@@ -769,7 +777,7 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <div class="hero-image d-flex justify-content-center">
+            <div class="hero-image d-flex justify-content-center" style="margin-top: 30px;">
               <div class="circle-bg">
                 <!-- <div class="emoji-icon">👩‍💻</div> -->
                  <div class="floating-icon">
@@ -801,7 +809,7 @@
             <span class="name-highlight">Passion & Precision</span>
           </h2>
         </div> -->
-        <div class="row align-items-center">
+        <div class="row align-items-center flex-column-reverse flex-md-row">
           <div class="col-lg-5 mb-4 mb-lg-0">
             <div class="about-image">
               <img
