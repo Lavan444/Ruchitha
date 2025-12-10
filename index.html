@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruchitha Patel - Frontend Web Developer</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0a1628 0%, #1a2742 100%);
+        color: #e0e0e0;
+        overflow-x: hidden;
+      }
+
+      /* Navbar */
+      .navbar {
+        background: rgba(10, 22, 40, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #00d4ff, #7b68ee);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .nav-link {
+        color: #b0b0b0 !important;
+        margin: 0 1rem;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .nav-link:hover {
+        color: #00d4ff !important;
+      }
+
+      .btn-resume {
+        background: #00d4ff;
+        color: #0a1628;
+        border: none;
+        padding: 0.5rem 1.5rem;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .btn-resume:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+        color: #fff;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding-top: 80px;
+        position: relative;
+        overflow: hidden;
+        margin: 80px 0px;
+      }
+
+      .availability-badge {
+        display: inline-flex;
+        align-items: center;
+        background: rgba(0, 212, 255, 0.1);
+        border: 1px solid rgba(0, 212, 255, 0.3);
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+        margin-bottom: 2rem;
+      }
+
+      .availability-dot {
+        width: 8px;
+        height: 8px;
+        background: #00ff88;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+
+      .hero-title {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .name-highlight {
+        background: linear-gradient(135deg, #00d4ff, #7b68ee);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .hero-subtitle {
+        font-size: 2rem;
+        color: #b0b0b0;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-description {
+        font-size: 1.1rem;
+        color: #909090;
+        max-width: 600px;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 3rem;
+      }
+
+      .btn-primary-custom {
+        background: #00d4ff;
+        color: #0a1628;
+        padding: 0.75rem 2rem;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary-custom:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+      }
+
+      .btn-secondary-custom {
+        background: transparent;
+        color: #00d4ff;
+        padding: 0.75rem 2rem;
+        border: 2px solid #00d4ff;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .btn-secondary-custom:hover {
+        background: #00d4ff;
+        color: #0a1628;
+      }
+
+      .stats {
+        display: flex;
+        gap: 3rem;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #00d4ff;
+      }
+
+      .stat-label {
+        color: #909090;
+        font-size: 0.9rem;
+      }
+
+      .hero-image {
+        position: relative;
+      }
+
+      .circle-bg {
+        width: 500px;
+        height: 500px;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 212, 255, 0.1),
+          rgba(123, 104, 238, 0.1)
+        );
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid rgba(0, 212, 255, 0.2);
+        position: relative;
+      }
+
+      .emoji-icon {
+        font-size: 8rem;
+      }
+
+      .floating-icon {
+        position: absolute;
+        font-size: 2rem;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      .icon-1 {
+        top: 10%;
+        right: 10%;
+        animation-delay: 0s;
+      }
+      .icon-2 {
+        bottom: 15%;
+        right: 15%;
+        animation-delay: 1s;
+      }
+      .icon-3 {
+        bottom: 25%;
+        left: 5%;
+        animation-delay: 2s;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      /* About Section */
+      .about-section {
+        padding: 100px 0;
+        background: rgba(26, 39, 66, 0.5);
+      }
+
+      .section-label {
+        color: #00d4ff;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+      }
+
+      .about-image {
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      }
+
+      .about-image img {
+        width: 100%;
+        height: auto;
+      }
+
+      .about-content {
+        padding: 2rem;
+      }
+
+      .about-text {
+        color: #b0b0b0;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+      }
+
+      .remote-badge {
+        display: inline-flex;
+        align-items: center;
+        background: rgba(0, 212, 255, 0.1);
+        border: 1px solid rgba(0, 212, 255, 0.3);
+        padding: 0.75rem 1.5rem;
+        border-radius: 10px;
+        margin-top: 1rem;
+      }
+
+      /* Skills Section */
+      .skills-section {
+        padding: 100px 0;
+      }
+
+      .skill-category {
+        background: rgba(26, 39, 66, 0.6);
+        border: 1px solid rgba(0, 212, 255, 0.2);
+        border-radius: 15px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        transition: all 0.3s ease;
+      }
+
+      .skill-category:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+      }
+
+      .category-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .category-icon {
+        font-size: 1.5rem;
+        color: #00d4ff;
+        margin-right: 1rem;
+      }
+
+      .category-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      .skill-item {
+        margin-bottom: 1.5rem;
+      }
+
+      .skill-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+      }
+
+      .skill-name {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .skill-icon {
+        width: 20px;
+        height: 20px;
+      }
+
+      .skill-percentage {
+        color: #00d4ff;
+        font-weight: 600;
+      }
+
+      .progress {
+        height: 8px;
+        background: rgba(0, 212, 255, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .progress-bar {
+        background: linear-gradient(90deg, #00d4ff, #7b68ee);
+        transition: width 1s ease;
+      }
+
+      .additional-skills {
+        text-align: center;
+        margin-top: 3rem;
+      }
+
+      .skill-badge {
+        display: inline-block;
+        background: rgba(0, 212, 255, 0.1);
+        border: 1px solid rgba(0, 212, 255, 0.3);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        margin: 0.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .skill-badge:hover {
+        background: rgba(0, 212, 255, 0.2);
+        transform: translateY(-2px);
+      }
+
+      /* Projects Section */
+      .projects-section {
+        padding: 100px 0;
+        background: rgba(26, 39, 66, 0.5);
+      }
+
+      .project-filters {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+      }
+
+      .filter-btn {
+        background: transparent;
+        color: #b0b0b0;
+        border: 1px solid rgba(0, 212, 255, 0.3);
+        padding: 0.5rem 1.5rem;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+      }
+
+      .filter-btn.active,
+      .filter-btn:hover {
+        background: #00d4ff;
+        color: #0a1628;
+        border-color: #00d4ff;
+      }
+
+      .project-card {
+        background: rgba(26, 39, 66, 0.6);
+        border: 1px solid rgba(0, 212, 255, 0.2);
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 2rem;
+        transition: all 0.3s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 212, 255, 0.3);
+      }
+
+      .project-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+
+      .project-content {
+        padding: 1.5rem;
+      }
+
+      .project-badge {
+        display: inline-block;
+        background: rgba(0, 212, 255, 0.2);
+        color: #00d4ff;
+        padding: 0.25rem 0.75rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+      }
+
+      .project-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .project-description {
+        color: #909090;
+        margin-bottom: 1rem;
+      }
+
+      .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .project-tag {
+        background: rgba(0, 212, 255, 0.1);
+        padding: 0.25rem 0.75rem;
+        border-radius: 15px;
+        font-size: 0.85rem;
+      }
+
+      .project-link {
+        color: #00d4ff;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .project-link:hover {
+        gap: 1rem;
+      }
+
+      /* Contact Section */
+      .contact-section {
+        padding: 100px 0;
+      }
+
+      .contact-info-card {
+        background: rgba(26, 39, 66, 0.6);
+        border: 1px solid rgba(0, 212, 255, 0.2);
+        border-radius: 15px;
+        padding: 3rem;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        background: rgba(10, 22, 40, 0.5);
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .contact-item:hover {
+        background: rgba(0, 212, 255, 0.1);
+        transform: translateX(10px);
+      }
+
+      .contact-icon {
+        font-size: 1.5rem;
+        color: #00d4ff;
+        background: rgba(0, 212, 255, 0.2);
+        padding: 1rem;
+        border-radius: 10px;
+        margin-right: 1.5rem;
+      }
+
+      .contact-details h5 {
+        font-size: 0.9rem;
+        color: #909090;
+        margin-bottom: 0.25rem;
+      }
+
+      .contact-details p {
+        margin: 0;
+        color: #e0e0e0;
+      }
+
+      .contact-details a {
+        color: #e0e0e0;
+        text-decoration: none;
+      }
+
+      .contact-cta-card {
+        background: rgba(26, 39, 66, 0.6);
+        border: 1px solid rgba(0, 212, 255, 0.2);
+        border-radius: 15px;
+        padding: 3rem;
+        text-align: center;
+      }
+
+      .cta-icon {
+        font-size: 3rem;
+        color: #00d4ff;
+        margin-bottom: 1.5rem;
+      }
+
+      .cta-title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .cta-description {
+        color: #909090;
+        margin-bottom: 2rem;
+      }
+
+      .btn-send-email {
+        background: #00d4ff;
+        color: #0a1628;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 0.3s ease;
+        margin-bottom: 2rem;
+      }
+
+      .btn-send-email:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
+        color: #fff;
+      }
+
+      .social-link {
+        color: #00d4ff;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .scroll-down {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateX(-50%) translateY(0);
+        }
+        40% {
+          transform: translateX(-50%) translateY(-10px);
+        }
+        60% {
+          transform: translateX(-50%) translateY(-5px);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2.5rem;
+        }
+        .hero-subtitle {
+          font-size: 1.5rem;
+        }
+        .stats {
+          flex-direction: column;
+          gap: 1rem;
+        }
+        .circle-bg {
+          width: 300px;
+          height: 300px;
+        }
+        .emoji-icon {
+          font-size: 5rem;
+        }
+      }
+
+      .hero-image {
+    position: relative;
+}
+
+.circle-bg {
+    width: 500px;             
+    height: 500px;
+    border-radius: 50%;
+    overflow: hidden;     
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     
+    border-radius: 50%;         
+}
+
+/* Floating Icons */
+.floating-icon {
+    position: absolute;
+    font-size: 28px;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#home">Ruchitha Patel</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a href="images/ruchitha_patel_resume.pdf">
+              <button class="btn btn-resume">
+               View Resume
+              </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <!-- <div class="availability-badge">
+              <span class="availability-dot"></span>
+              Available for freelance projects
+            </div> -->
+            <h1 class="hero-title">
+              Hi, I'm <span class="name-highlight">Ruchitha<br />Patel</span>
+            </h1>
+            <p class="hero-subtitle">Frontend Web Developer</p>
+            <p class="hero-description">
+              With 2+ years of experience crafting beautiful, responsive
+              websites using HTML5, CSS3, JavaScript, Bootstrap, and WordPress.
+              I transform ideas into pixel-perfect digital experiences.
+            </p>
+            <div class="hero-buttons">
+              <a href="#projects">
+                <button class="btn btn-primary-custom">
+                  </i>View My Projects
+                </button>
+              </a>
+              <a href="#contact">
+              <button class="btn btn-secondary-custom">
+                </i>Connect now
+              </button>
+              </a>
+            </div>
+            <div class="stats">
+              <div class="stat-item">
+                <div class="stat-number">2+</div>
+                <div class="stat-label">Years Experience</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Projects Completed</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Happy Clients</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-image d-flex justify-content-center">
+              <div class="circle-bg">
+                <!-- <div class="emoji-icon">👩‍💻</div> -->
+                 <div class="floating-icon">
+                    <img src="images/ruchitha.jpeg" width="300px" style="border-radius: 900px;">
+                 </div>
+                <!-- <div class="floating-icon icon-1">⚡</div>
+                <div class="floating-icon icon-2">🎨</div>
+                <div class="floating-icon icon-3">💻</div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-down">
+          <i
+            class="fas fa-chevron-down"
+            style="color: #00d4ff; font-size: 1.5rem"
+          ></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <!-- <div class="text-center mb-5">
+          <div class="section-label">About Me</div>
+          <h2 class="section-title">
+            Crafting Digital Experiences with
+            <span class="name-highlight">Passion & Precision</span>
+          </h2>
+        </div> -->
+        <div class="row align-items-center">
+          <div class="col-lg-5 mb-4 mb-lg-0">
+            <div class="about-image">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600"
+                alt="Ruchitha Patel" height="100px"
+              />
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="about-content">
+                <div class="section-label">About Me</div>
+          <h2 class="section-title">
+            Crafting Creative Designs with
+            <span class="name-highlight">Passion & Precision</span>
+          </h2>
+              <p class="about-text">
+                I'm Emmadi Ruchitha Patel, a dedicated Frontend Web Developer
+                with over 2 years of hands-on experience in building modern,
+                responsive websites. My journey in web development has been
+                driven by a passion for creating beautiful digital experiences
+                that make a real impact.
+              </p>
+              <p class="about-text">
+                Throughout my career, I've had the privilege of working on
+                diverse projects ranging from corporate websites to AI-powered
+                platforms. I specialize in HTML5, CSS3, SCSS, LESS, Flexbox,
+                Bootstrap, JavaScript, and WordPress, with experience deploying
+                live websites on GoDaddy servers.
+              </p>
+              <p class="about-text">
+                I believe in writing clean, maintainable code and staying
+                updated with the latest industry trends. My goal is to help
+                businesses establish a strong online presence through
+                pixel-perfect, user-friendly websites.
+              </p>
+              <!-- <div class="remote-badge">
+                <i
+                  class="fas fa-map-marker-alt me-2"
+                  style="color: #00d4ff"
+                ></i>
+                Available for remote freelance work worldwide
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <div class="section-label">My Skills</div>
+          <h2 class="section-title">Technologies I Work With</h2>
+          <p style="color: #909090; max-width: 700px; margin: 0 auto">
+            A comprehensive toolkit built over 2+ years of hands-on experience
+            in frontend development
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 mb-3">
+            <div class="skill-category">
+              <div class="category-header">
+                <div class="category-icon"><i class="fas fa-code"></i></div>
+                <div class="category-title">Core Technologies</div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-name">HTML5</div>
+                  <div class="skill-percentage">90%</div>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-name">CSS3</div>
+                  <div class="skill-percentage">90%</div>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-name">JavaScript</div>
+                  <div class="skill-percentage">85%</div>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-3">
+            <div class="skill-category">
+              <div class="category-header">
+                <div class="category-icon"><i class="fas fa-palette"></i></div>
+                <div class="category-title">CSS Frameworks</div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-name">SCSS</div>
+                  <div class="skill-percentage">80%</div>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-name">LESS</div>
+                  <div class="skill-percentage">80%</div>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-name">Tailwind CSS</div>
+                  <div class="skill-percentage">80%</div>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-3">
+            <div class="skill-category">
+              <div class="category-header">
+                <div class="category-icon">
+                  <i class="fas fa-layer-group"></i>
+                </div>
+                <div class="category-title">Frameworks & Libraries</div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-name">Bootstrap</div>
+                  <div class="skill-percentage">90%</div>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-name">Flexbox</div>
+                  <div class="skill-percentage">85%</div>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-name">Angular</div>
+                  <div class="skill-percentage">70%</div>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-3">
+            <div class="skill-category">
+              <div class="category-header">
+                <div class="category-icon"><i class="fas fa-server"></i></div>
+                <div class="category-title">CMS & Platforms</div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-name">WordPress</div>
+                  <div class="skill-percentage">85%</div>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-name">GoDaddy</div>
+                  <div class="skill-percentage">80%</div>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-3">
+            <div class="skill-category">
+              <div class="category-header">
+                <div class="category-icon"><i class="fas fa-tools"></i></div>
+                <div class="category-title">Development Tools</div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-name">Git</div>
+                  <div class="skill-percentage">75%</div>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-name">VS Code</div>
+                  <div class="skill-percentage">90%</div>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 90%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="additional-skills">
+          <h4 style="margin-bottom: 1.5rem">Also Experienced With</h4>
+          <span class="skill-badge">PHPMyAdmin</span>
+          <span class="skill-badge">MySQL</span>
+          <span class="skill-badge">React</span>
+          <span class="skill-badge">Developer Tools</span>
+          <span class="skill-badge">GitHub</span>
+          <span class="skill-badge">Photoshop</span>
+          <span class="skill-badge">SEO</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <div class="section-label">My Projects</div>
+          <h2 class="section-title">Featured Work</h2>
+          <p style="color: #909090; max-width: 700px; margin: 0 auto">
+            A showcase of websites I’ve built for clients and internal projects,
+            demonstrating my expertise across various technologies.
+          </p>
+        </div>
+        <!-- <div class="project-filters">
+          <button class="filter-btn active">All Projects</button>
+          <button class="filter-btn">Client Projects (8)</button>
+          <button class="filter-btn">Internal Projects (8)</button>
+        </div> -->
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <div class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600"
+                alt="E-commerce Platform"
+                class="project-image"
+              />
+              <div class="project-content">
+                <span class="project-badge">Internal Project</span>
+                <h3 class="project-title">TalentScan AI</h3>
+                <p class="project-description">
+                  AI-powered talent acquisition platform with intelligent
+                  matching algorithms.
+                </p>
+
+                <a href="https://talentscan.ai/" class="project-link">
+                  View Details <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600"
+                alt="Real Estate Site"
+                class="project-image"
+              />
+              <div class="project-content">
+                <span class="project-badge">Internal Project</span>
+                <h3 class="project-title">SPG America</h3>
+                <p class="project-description">
+                  Corporate website with comprehensive service offerings and
+                  modern interface.
+                </p>
+
+                <a href="https://www.spgamerica.com/" class="project-link">
+                  View Details <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600"
+                alt="Tech Startup"
+                class="project-image"
+              />
+              <div class="project-content">
+                <span class="project-badge">Internal Project</span>
+                <h3 class="project-title">Avatar Chatbots AI</h3>
+                <p class="project-description">
+                  AI chatbot platform with immersive avatar-based interactions.
+                </p>
+
+                <a href="https://avatarchatbots.ai/" class="project-link">
+                  View Details <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600"
+                alt="Global Point Inc"
+                class="project-image"
+              />
+              <div class="project-content">
+                <span class="project-badge">Client Project</span>
+                <h3 class="project-title">Global Point Inc</h3>
+                <p class="project-description">
+                  Corporate website with modern design and seamless user
+                  experience
+                </p>
+                <!-- <div class="project-tags">
+                  <span class="project-tag">WordPress</span>
+                  <span class="project-tag">CSS3</span>
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">+1</span>
+                </div> -->
+                <a href="https://www.globalpointinc.com/" class="project-link">
+                  View Details <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600"
+                alt="KHP Solutions"
+                class="project-image"
+              />
+              <div class="project-content">
+                <span class="project-badge">Client Project</span>
+                <h3 class="project-title">KHP Solutions</h3>
+                <p class="project-description">
+                  Business solutions website with clean interface and
+                  professional aesthetics
+                </p>
+
+                <a href="https://khpsolutions.com/" class="project-link">
+                  View Details <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600"
+                alt="Care and Love"
+                class="project-image"
+              />
+              <div class="project-content">
+                <span class="project-badge">Client Project</span>
+                <h3 class="project-title">Care and Love</h3>
+                <p class="project-description">
+                  Healthcare organization website with compassionate design
+                  approach
+                </p>
+
+                <a href="https://careandlove.org/" class="project-link">
+                  View Details <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <div class="section-label">Get In Touch</div>
+          <h2 class="section-title">Let's Work Together</h2>
+          <p style="color: #909090; max-width: 700px; margin: 0 auto">
+            Have a project in mind? I'm always open to discussing new
+            opportunities, creative ideas, or partnerships. Let's create
+            something amazing together!
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-5 mb-4">
+            <div class="contact-info-card">
+              <h3 style="margin-bottom: 2rem">Contact Information</h3>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                  <h5>Email</h5>
+                  <p>
+                    <a href="mailto:ruchithapatel@example.com"
+                      >ruchithapatel@example.com</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-details">
+                  <h5>Call</h5>
+                  <p>
+                    <a href="tel:8179606226">8179606226</a>
+                  </p>
+                </div>
+              </div>
+              <!-- <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <h5>Location</h5>
+                  <p>Available Worldwide (Remote)</p>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="contact-cta-card">
+              <div class="cta-icon">
+                <i class="fas fa-paper-plane"></i>
+              </div>
+              <h3 class="cta-title">Ready to Start?</h3>
+              <p class="cta-description">
+                Drop me an email and let's discuss how I can help bring your
+                vision to life. I typically respond within 24 hours.
+              </p>
+              <a href="mailto:ruchithapatel04@gamil.com">
+                <button class="btn btn-send-email">
+                  <i class="fas fa-envelope"></i>
+                  Send Email
+                </button>
+              </a>
+              <p style="color: #909090; margin-bottom: 0rem"></p>
+              <a
+                href="www.linkedin.com/in/ruchitha-patel-emmadi-77352326b"
+                class="social-link"
+              >
+                <i class="fab fa-linkedin"></i>
+                Connect on LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      style="
+        background: rgba(10, 22, 40, 0.95);
+        padding: 2rem 0;
+        text-align: center;
+        border-top: 1px solid rgba(0, 212, 255, 0.2);
+      "
+    >
+      <div class="container">
+        <p style="margin: 0; color: #909090">
+          &copy; 2025 Emmadi Ruchitha Patel. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+
+      // Navbar background on scroll
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.style.background = "rgba(10, 22, 40, 1)";
+        } else {
+          navbar.style.background = "rgba(10, 22, 40, 0.95)";
+        }
+      });
+
+      // Progress bar animation on scroll
+      const observerOptions = {
+        threshold: 0.5,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const progressBars = entry.target.querySelectorAll(".progress-bar");
+            progressBars.forEach((bar) => {
+              const width = bar.style.width;
+              bar.style.width = "0%";
+              setTimeout(() => {
+                bar.style.width = width;
+              }, 100);
+            });
+          }
+        });
+      }, observerOptions);
+
+      const skillsSection = document.querySelector(".skills-section");
+      if (skillsSection) {
+        observer.observe(skillsSection);
+      }
+
+      // Project filter functionality
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          filterBtns.forEach((b) => b.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
